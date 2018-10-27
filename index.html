@@ -43,15 +43,15 @@
             </p>
 
             <ons-carousel swipeable auto-scroll overscrollable id="carousel">
-                <ons-carousel-item id="carousel1" style="background: url('img/1.jpg')no-repeat center; background-size:contain;  ">
+                <ons-carousel-item id="carousel1" style="background: url('photo/1.jpg')no-repeat center; background-size:contain;  ">
                     <div style="text-align: center; font-size: 30px; margin-top: 20px; width: 350px; height: 400px;">
                     </div>
                 </ons-carousel-item>
-                <ons-carousel-item id="carousel2" style="background: url('img/2.jpg')no-repeat center; background-size:contain;  ">
+                <ons-carousel-item id="carousel2" style="background: url('photo/2.jpg')no-repeat center; background-size:contain;  ">
                     <div style="text-align: center; font-size: 30px; margin-top: 20px; width: 350px; height: 400px;">
                     </div>
                 </ons-carousel-item>
-                <ons-carousel-item id="carousel3" style="background: url('img/3.jpg')no-repeat center; background-size:contain;  ">
+                <ons-carousel-item id="carousel3" style="background: url('photo/3.jpg')no-repeat center; background-size:contain;  ">
                     <div style="text-align: center; font-size: 30px; margin-top: 20px; width: 350px; height: 400px;">
                     </div>
                 </ons-carousel-item>
@@ -64,7 +64,7 @@
                         <ons-row style="height:120px" vertical-align="center">
                                
                         <% categories.forEach(function(category){%>
-                <ons-col style="background:hotpink;" width="33%">
+                <ons-col style="background:gray;" width="33%">
                     <p style="text-align: center; margin: 10px;">
                         <ons-icon size="60px" id= "icon1" icon="<%= category.icon %>"></ons-icon>
                     </p>
@@ -88,7 +88,7 @@
             </p>
             <ons-list-item>
                 <div class="left">
-                    <img class="list-item__thumbnail" src="img\item1.jpg">
+                    <img class="list-item__thumbnail" src="photo\item1.jpg">
                 </div>
                 <div class="center">
                     <span class="list-item__title">Apple Watch Serier GPS 42MM Grey</span>
@@ -100,7 +100,7 @@
             </ons-list-item>
             <ons-list-item>
                 <div class="left">
-                    <img class="list-item__thumbnail" src="img\item2.jpg">
+                    <img class="list-item__thumbnail" src="photo\item2.jpg">
                 </div>
                 <div class="center">
                     <span class="list-item__title">MICROLAB SPEAKER 2.1</span>
@@ -112,7 +112,7 @@
             </ons-list-item>
             <ons-list-item>
                 <div class="left">
-                    <img class="list-item__thumbnail" src="img\item3.jpg">
+                    <img class="list-item__thumbnail" src="photo\item3.jpg">
                 </div>
                 <div class="center">
                     <span class="list-item__title">NIKE Air Max 90 ดำเทาแดง เบอร์ 40</span>
@@ -142,7 +142,7 @@
         $.getJSON('home.json', function (data) {
             console.log(data);
             $('#appname').html(data.appname);
-            var style = "background: url('img/" + data.slides[0] + "') no-repeat center; background-size: contain;'";
+            var style = "background: url('photo/" + data.slides[0] + "') no-repeat center; background-size: contain;'";
             console.log(style);
             $('#carousel1').attr('style', style);
             var icon_template = $('#icon_template').html();
