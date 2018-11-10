@@ -13,33 +13,57 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script src="cordova.js"></script>
     <title>Quiz I</title>
-
+    
     <script>
         // Initialize Firebase
         var config = {
-          apiKey: "AIzaSyDwR89ZYo757lcF71fBKfKGEdgAMEvh7r0",
-          authDomain: "shopee-bc901.firebaseapp.com",
-        
+            apiKey: "AIzaSyDwR89ZYo757lcF71fBKfKGEdgAMEvh7r0",
+            authDomain: "shopee-bc901.firebaseapp.com",
+
         };
         firebase.initializeApp(config);
-      </script>
+    </script>
 
 </head>
+ <style>
+.Cencel{
+  background-color: #dd4b39;
+  color: white;
+}
 
+.Signup{
+
+  color: white;
+}
+
+
+ </style>
 <body>
+        
     <ons-page>
-        <div style="text-align: center; margin-top: 30px;">
+           
+        <div style="text-align: center; margin-top: 180px;">
             <h3>Register new user</h3>
             <p>
+                   
                 <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
             </p>
             <p>
+                    
                 <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
             </p>
-            <p style="margin-top: 30px;">
-                <ons-button onclick="register()">Sign Up for New User</ons-button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+          
+            <p style="margin-top: 15px;">
+                <ons-button  style="width:200px;height:38px" class="Signup btn" onclick="register()">Sign Up </ons-button>
             </p>
+            <p style="margin-top: 15px;">
+                    <ons-button  style="width:200px;height:38px" class="Cencel btn" onclick="window.location.href='login.html'" >Cencel</ons-button>
+                </p>
         </div>
+    
     </ons-page>
 
     <script>

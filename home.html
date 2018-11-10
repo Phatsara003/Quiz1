@@ -33,7 +33,7 @@
       padding-left: 5px;
       padding-bottom: 5px;
       padding-right: 5px;
-      color: orange;
+      color:#FA8072;
     }
   </style>
 </head>
@@ -43,7 +43,7 @@
   <ons-page>
     <ons-toolbar>
       <div class="left">
-        <ons-icon class="toolbaricon" size="30px" icon="fa-shopping-bag">
+        <ons-icon class="toolbaricon" size="30px" icon="fa-camera" onclick="scanQR()">
         </ons-icon>
       </div>
       <div class="center" id="appname">#</div>
@@ -72,7 +72,7 @@
   <template id="tab1.html">
     <ons-page id="Tab1">
       <p style="text-align: center; margin-top: 10px;">
-        <ons-search-input placeholder="Search" onchange="search(this.value)"></ons-search-input>
+        <ons-search-input placeholder="Search"  onchange="search(this.value)"></ons-search-input>
       </p>
       <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 300px;">
         <ons-carousel-item id="carousel1" style="background: url('') no-repeat center; background-size: contain;">
@@ -88,7 +88,7 @@
       <script id="icon_template" type="text/template">
           <ons-row style="height:120px" vertical-align="center">  
           <% categories.forEach(function(category){%>  
-          <ons-col style="background:orange; border:solid 1px white;color: black;" width="33%"onclick="changeTab('<%= category.name %>')">
+          <ons-col style="background:#FA8072; border:solid 1px white;color: black;" width="33%"onclick="changeTab('<%= category.name %>')">
       <p style="text-align: center; margin: 10px;" >
               <ons-icon size="60px" icon="<%= category.icon %>"></ons-icon>
             </p>
@@ -145,6 +145,7 @@
   <!--teb3-->
   <template id="tab3.html">
     <ons-page id="Tab3">
+        
       <p style="text-align: center; margin-top: 10px;">
         <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
       </p>
@@ -451,6 +452,9 @@ function search(search) {
     $('#allPr').html(html);
 
 
+  }
+  function scanQR(){
+    window.location.href = 'scan.html';
   }
   </script>
 

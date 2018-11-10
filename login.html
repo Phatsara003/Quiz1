@@ -25,10 +25,17 @@
     </script>
 
 </head>
+<style >
 
+    .google{
+  background-color:#B22222;
+  color: white;
+}
+</style>
 <body>
     <ons-page>
-        <div style="text-align: center; margin-top: 30px;">
+        <div style="text-align: center; margin-top: 180px;"  >
+                <h3>Sign in</h3>
             <p>
                 <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
             </p>
@@ -36,14 +43,12 @@
                 <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
             </p>
             <p style="margin-top: 30px;">
-                <ons-button onclick="login()">Sign in</ons-button>
+                <ons-button style="width:200px;height:38px" onclick="login()">Sign in</ons-button>
             </p>
             <p style="margin-top: 30px;">
-                <ons-button onclick="google()">Sign in with google</ons-button>
+                <ons-button style="width:200px;height:38px"   class="google btn"  onclick="google()">Sign in with google</ons-button>
             </p>
-            <!-- <p style="margin-top: 30px;">
-                <ons-button onclick="facebook()">Sign in with facebook</ons-button>
-            </p> -->
+            
             <p style="margin-top: 30px;">
                 <a href="register.html">sign up for a new user</a>
             </p>
@@ -79,32 +84,6 @@
 
         }
 
-        //facebook
-        // function facebook() {
-        //     var provider = new firebase.auth.FacebookAuthProvider();
-        //     provider.addScope('email');
-        //     firebase.auth().signInWithRedirect(provider);
-
-        //     firebase.auth().getRedirectResult().then(function (result) {
-        //         if (result.credential) {
-        //             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        //             var token = result.credential.accessToken;
-        //             // ...
-        //         }
-        //         // The signed-in user info.
-        //         var user = result.user;
-        //     }).catch(function (error) {
-        //         // Handle Errors here.
-        //         var errorCode = error.code;
-        //         var errorMessage = error.message;
-        //         // The email of the user's account used.
-        //         var email = error.email;
-        //         // The firebase.auth.AuthCredential type that was used.
-        //         var credential = error.credential;
-        //         // ...
-        //     });
-
-        // }
 
         var login = function () {
             var username = document.getElementById('username').value;
