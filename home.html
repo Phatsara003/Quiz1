@@ -288,11 +288,7 @@
     var code = localStorage.getItem("code");
 
     if (code == null) {
-    }else{
-    myNavigator.pushPage('detailP.html');
-    showDetailP();
-      
-      $.getJSON('home.json', function (data) {
+    $.getJSON('home.json', function (data) {
         var docRef = db.collection("UI").doc("home");
         docRef.get().then(function (doc) {
           if (doc.exists) {
@@ -319,8 +315,14 @@
 
       
       })
+    }else{
+    myNavigator.pushPage('detailP.html');
+    showDetailP();
+      
+     
     }
   }
+  
 
 
 
